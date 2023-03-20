@@ -52,8 +52,8 @@ def decrypt_message(ciphertext_hex):
     key = key_entry.get().encode('utf-8')
     cipher = AES.new(key, AES.MODE_ECB)
     decrypted_message = cipher.decrypt(ciphertext)
-    unpip install pycryptodomepadded_message = unpad(decrypted_message, BLOCK_SIZE)
-    message = unpadded_message.decode('utf-8')
+    padded_message = decrypted_message.decode('utf-8')
+unpadded_message = unpad(padded_message, BLOCK_SIZE)
     result_text.delete("1.0", tk.END)
     result_text.insert(tk.END, message)
 
